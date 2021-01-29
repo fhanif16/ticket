@@ -30,7 +30,7 @@
 
     <!--Booking Section-->
     <main class="main-content container">
-        <div id="booking-area"class="booking-form">
+        <div class="booking-form">
             <h3>Booking Flights</h3>
             <div class="input-group">
                 <label for="">Flying From</label>
@@ -117,12 +117,13 @@
             <button id="booking" class="btn-style">Book Now</button>
         </div>
         
-        <div  class="booking-content">
+        <div id="info" class="booking-content">
             <h1>discover <br> around the world</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
         </div>
         <div id="order-confirmation">
-            <h1> Thanks for buying from us.Have A safe Journey</h1>
+            <h1> Thanks for buying from us.</h1>
+            <h1>Have A safe Journey</h1>
         </div>
     </section>
     <script>
@@ -211,15 +212,17 @@ function calculateTotal(){
          /*document.getElementById("booking").addEventListener("click", function() {
   alert("confirm your order");
 }); */
-const bookingBtn = document.getElementById("booking-area");
-        bookingBtn.addEventListener('click', function () {
+          /*   const bookingBtn = document.getElementById("booking-area");
+             bookingBtn.addEventListener('click', function () {
             const bookingArea = document.getElementById("booking-area");
             bookingArea.style.display = "none";
+            const information = document.getElementById("info");
+            information.style.display="none";
             const order = document.getElementById("order-confirmation");
-            order.style.display = "block";
+            order.style.display = "block"; 
 
-
-        })
+ 
+        }) */
 
 
      

@@ -123,6 +123,13 @@ nav ul li a:hover, a.active{
 }
 #order-confirmation{
     display: none;
-    text-align: center;
+    text-align:center;
+    margin-left: 50px;
+    margin-top: 50px;
+    font-size: large;
+    color: blue;
+    padding: 20px;
+   
+   
 }
 
