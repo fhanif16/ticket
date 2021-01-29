@@ -20,7 +20,7 @@ nav{
     padding: 20px 0;
 }
 .container{
-    width: 1200px;
+    width: 1500px;
     max-width: 85%;
     margin: 0 auto;
 }
@@ -121,8 +121,5 @@ nav ul li a:hover, a.active{
     display: flex;
     justify-content: space-between;
 }
-#plus,#add,#minus,#remove{
-    float:right;
-    padding: 2px;
-   
-}
+
+
