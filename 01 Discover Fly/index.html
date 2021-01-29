@@ -112,15 +112,37 @@
     </section>
     <script>
       document.getElementById("plus").addEventListener("click",function(){
-         const inputNumber = document.getElementById("input-number");
-         const inputNumberValue = parseInt(inputNumber.value);
-         const currentNumber = inputNumberValue +1;
+      
+
+       handleChangesOfProduct(true);
+
+      }) 
+      document.getElementById("minus").addEventListener("click",function(){
+      
+
+      handleChangesOfProduct(false);
+
+     }) 
+      function handleChangesOfProduct(isIncrease){
+
+        const inputNumber = document.getElementById("input-number");
+       const inputNumberValue = parseInt(inputNumber.value);
+      
+         let currentNumber = inputNumberValue;
+       
+         if(isIncrease== true && currentNumber>= 0 ){
+
+         currentNumber = inputNumberValue +1;}
+         if(isIncrease == false && currentNumber>0){
+             currentNumber = inputNumberValue -1;
+         }
          inputNumber.value=currentNumber;
         document.getElementById("input-number").innerText = currentNumber;
+      }
          
        
 
-      })
+     
     </script>
   
  
