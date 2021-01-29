@@ -47,7 +47,8 @@
                     <label for="">Return</label>
                     <input class="inp-style" type="date" name="">
                 </div>
-            </div>
+            </div> 
+            <section>
             <div class="input-group f-class">
               
                 <label for="">First Class ($150)</label> </div>
@@ -62,18 +63,27 @@
                 <div id="minus"class="plus-minus-btn">
                     <p>-</p>
                 </div>
-            </div>
-                
-            
+            </div> 
+        </section>
+                <br>
+            <section>
             <div class="input-group f-class">
-                <div>
-                    <label for="">Economy ($100)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+              
+                <label for="">Economy Class ($100)</label> </div>
+                <div  >
+                    <div id ="add"class="plus-minus-btn">
+                        <p>+</p>
+                    </div>
+                    <div>
+                    <input id="input-value"class="inp-style inp-width" type="number" name="">
                 </div>
-                <div class="plus-minus-btn">
-                    <p> <span>+</span> <span>-</span> </p>
+                   
+                <div id="remove"class="plus-minus-btn">
+                    <p>-</p>
                 </div>
             </div>
+        </section>
+        <br>
             <div class="calculations">
                 <div class="amount">
                     <div class="left">
@@ -117,10 +127,23 @@
        handleChangesOfProduct(true);
 
       }) 
+
       document.getElementById("minus").addEventListener("click",function(){
       
 
       handleChangesOfProduct(false);
+
+     }) 
+     document.getElementById("add").addEventListener("click",function(){
+      
+
+      handleChangesProduct(true);
+
+     }) 
+     document.getElementById("remove").addEventListener("click",function(){
+      
+
+      handleChangesProduct(true);
 
      }) 
       function handleChangesOfProduct(isIncrease){
@@ -140,7 +163,24 @@
         document.getElementById("input-number").innerText = currentNumber;
       }
          
-       
+      function handleChangesProduct(Increase){
+
+const inputValue = document.getElementById("input-value");
+const inputNumberValue = parseInt(inputValue.value);
+
+ let currentNumber = inputNumberValue;
+
+ if(Increase== true && currentNumber>= 0 ){
+
+ currentNumber = inputNumberValue +1;}
+ if(Increase == false && currentNumber>0){
+     currentNumber = inputNumberValue -1;
+ }
+ inputValue.value=currentNumber;
+document.getElementById("input-value").innerText = currentNumber;
+}
+ 
+
 
      
     </script>
