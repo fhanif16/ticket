@@ -121,5 +121,8 @@ nav ul li a:hover, a.active{
     display: flex;
     justify-content: space-between;
 }
-
+#order-confirmation{
+    display: none;
+    text-align: center;
+}
 

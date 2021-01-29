@@ -92,7 +92,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p id ="subtotal">$500</p>
+                        <p id ="subtotal">$0</p>
                     </div>
                 </div>
 
@@ -101,7 +101,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p id="tax-amount"> $50</p>
+                        <p id="tax-amount"> $0</p>
                     </div>
                 </div>
                 <hr>
@@ -110,16 +110,19 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p id="grand-total">$550</p>
+                        <p id="grand-total">$0</p>
                     </div>
                 </div>
             </div>
             <button id="booking" class="btn-style">Book Now</button>
         </div>
-
+        
         <div id="booking-area" class="booking-content">
             <h1>discover <br> around the world</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
+        </div>
+        <div id="order-confirmation">
+            <h1> Thanks for buying from us.Have A safe Journey</h1>
         </div>
     </section>
     <script>
@@ -205,9 +208,18 @@ function calculateTotal(){
          const grandTotal = totalPrice +tax;
          document.getElementById("grand-total").innerText ='$' + grandTotal; }
 
-         document.getElementById("booking").addEventListener("click", function() {
+         /*document.getElementById("booking").addEventListener("click", function() {
   alert("confirm your order");
-});
+}); */
+const bookingBtn = document.getElementById("booking-area");
+        bookingBtn.addEventListener('click', function () {
+            const BookingArea = document.getElementById("booking-area");
+            bookingArea.style.display = "none";
+            const order = document.getElementById("order-confirmation");
+            order.style.display = "block";
+
+
+        })
 
 
      
