@@ -57,7 +57,7 @@
                         <p>+</p>
                     </div>
                     <div>
-                    <input id="input-number"class="inp-style inp-width" type="number" name="">
+                    <input id="input-number"class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                    
                 <div id="minus"class="plus-minus-btn">
@@ -75,7 +75,7 @@
                         <p>+</p>
                     </div>
                     <div>
-                    <input id="input-value"class="inp-style inp-width" type="number" name="">
+                    <input id="input-value"class="inp-style inp-width" type="number" name="0" value="0" > 
                 </div>
                    
                 <div id="remove"class="plus-minus-btn">
@@ -90,7 +90,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p>$500</p>
+                        <p id ="subtotal">$500</p>
                     </div>
                 </div>
 
@@ -99,7 +99,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p>$50</p>
+                        <p id="tax-amount"> $50</p>
                     </div>
                 </div>
                 <hr>
@@ -108,7 +108,7 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p>$550</p>
+                        <p id="grand-total">$550</p>
                     </div>
                 </div>
             </div>
@@ -125,6 +125,8 @@
       
 
        handleChangesOfProduct(true);
+       calculateTotal();
+         
 
       }) 
 
@@ -132,24 +134,28 @@
       
 
       handleChangesOfProduct(false);
+      calculateTotal()
 
      }) 
      document.getElementById("add").addEventListener("click",function(){
       
 
       handleChangesProduct(true);
+      calculateTotal()
 
      }) 
      document.getElementById("remove").addEventListener("click",function(){
       
 
       handleChangesProduct(false);
+      calculateTotal()
 
      }) 
       function handleChangesOfProduct(isIncrease){
 
         const inputNumber = document.getElementById("input-number");
        const inputNumberValue = parseInt(inputNumber.value);
+      
       
          let currentNumber = inputNumberValue;
        
@@ -166,20 +172,38 @@
       function handleChangesProduct(Increase){
 
 const inputValue = document.getElementById("input-value");
-const inputNumberValue = parseInt(inputValue.value);
+const numberValue = parseInt(inputValue.value);
 
- let currentNumber = inputNumberValue;
+ let currentNumber = numberValue;
 
  if(Increase== true && currentNumber>= 0 ){
 
- currentNumber = inputNumberValue +1;}
+ currentNumber = numberValue +1;}
  if(Increase == false && currentNumber>0){
-     currentNumber = inputNumberValue -1;
+     currentNumber = numberValue -1;
  }
  inputValue.value=currentNumber;
 document.getElementById("input-value").innerText = currentNumber;
 }
  
+function calculateTotal(){
+       const inputNumber = document.getElementById("input-number");
+       const inputNumberValue = parseInt(inputNumber.value);
+      
+        
+       const inputValue = document.getElementById("input-value");
+       const numberValue = parseInt(inputValue.value);
+
+         const totalPrice = inputNumberValue* 150 + numberValue*100 ;
+         document.getElementById("subtotal").innerText = totalPrice;
+
+        const tax = Math.round(totalPrice *0.10);
+       
+         document.getElementById("tax-amount").innerText ='$' + tax;
+         const grandTotal = totalPrice +tax;
+         document.getElementById("grand-total").innerText ='$' + grandTotal; }
+
+  
 
 
      

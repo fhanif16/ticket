@@ -121,9 +121,8 @@ nav ul li a:hover, a.active{
     display: flex;
     justify-content: space-between;
 }
-#plus{
-    float: right;
-}
-#minus{
-    float: right;
+#plus,#add,#minus,#remove{
+    float:right;
+    padding: 2px;
+   
 }
