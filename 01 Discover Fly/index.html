@@ -12,7 +12,8 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
     <!----bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 
 <body>
@@ -30,6 +31,7 @@
 
     <!--Booking Section-->
     <main class="main-content container">
+
         <div class="booking-form">
             <h3>Booking Flights</h3>
             <div class="input-group">
@@ -43,56 +45,60 @@
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
+                        <input class="inp-style" type="date" name="">
                 </div>
                 <div class="input-group">
                     <label for="">Return</label>
                     <input class="inp-style" type="date" name="">
                 </div>
-            </div> 
-            <section>
-            <div class="input-group f-class">
-              
-                <label for="">First Class ($150)</label> </div>
-                <div  >
-                    <div id ="plus"class="plus-minus-btn">
-                        <button type="button" class="btn btn-primary">+</button>
-                    </div>
-                    <div>
-                    <input id="input-number"class="inp-style inp-width" type="number" name="" value="0">
-                </div>
-                   
-                <div id="minus"class="plus-minus-btn">
-                    <button type="button" class="btn btn-primary">-</button>
-                </div>
-            </div> 
-        </section>
-                <br>
-            <section>
-            <div class="input-group f-class">
-              
-                <label for="">Economy Class ($100)</label> </div>
-                <div  >
-                    <div id ="add"class="plus-minus-btn">
-                        <button type="button" class="btn btn-primary">+</button>
-                    </div>
-                    <div>
-                    <input id="input-value"class="inp-style inp-width" type="number" name="0" value="0" > 
-                </div>
-                   
-                <div id="remove"class="plus-minus-btn">
-                    <button type="button" class="btn btn-primary">-</button>
-                </div>
             </div>
-        </section>
-        <br>
+            <section>
+                <div class="input-group f-class">
+
+                    <label for="">First Class ($150)</label>
+                </div>
+                <div>
+                    <div id="plus" class="plus-minus-btn">
+                        <button type="button" class="btn btn-primary">+</button>
+                    </div>
+                    <div>
+                        <input id="input-number" class="inp-style inp-width" type="number" name="" value="0">
+                    </div>
+
+                    <div id="minus" class="plus-minus-btn">
+                        <button type="button" class="btn btn-primary">-</button>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <section>
+                <div class="input-group f-class">
+
+                    <label for="">Economy Class ($100)</label>
+                </div>
+                <div>
+                    <div id="add" class="plus-minus-btn">
+                        <button type="button" class="btn btn-primary">+</button>
+                    </div>
+                    <div>
+                        <input id="input-value" class="inp-style inp-width" type="number" name="0" value="0">
+                    </div>
+
+                    <div id="remove" class="plus-minus-btn">
+                        <button type="button" class="btn btn-primary">-</button>
+                    </div>
+                </div>
+            </section>
+            <br>
             <div class="calculations">
                 <div class="amount">
                     <div class="left">
+
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p id ="subtotal">$0</p>
+
+                        <p id="subtotal">$0</p>
                     </div>
                 </div>
 
@@ -116,124 +122,104 @@
             </div>
             <button id="booking" class="btn-style">Book Now</button>
         </div>
-        
+
         <div id="info" class="booking-content">
             <h1>discover <br> around the world</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias
+                veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise
+                voluptatibus quam</p>
         </div>
-        <div id="order-confirmation">
-            <h1> Thanks for buying from us.</h1>
-            <h1>Have A safe Journey</h1>
-        </div>
-    </section>
-    <script>
-      document.getElementById("plus").addEventListener("click",function(){
-      
-
-       handleChangesOfProduct(true);
-       calculateTotal();
-         
-
-      }) 
-
-      document.getElementById("minus").addEventListener("click",function(){
-      
-
-      handleChangesOfProduct(false);
-      calculateTotal()
-
-     }) 
-     document.getElementById("add").addEventListener("click",function(){
-      
-
-      handleChangesProduct(true);
-      calculateTotal()
-
-     }) 
-     document.getElementById("remove").addEventListener("click",function(){
-      
-
-      handleChangesProduct(false);
-      calculateTotal()
-
-     }) 
-      function handleChangesOfProduct(isIncrease){
-
-        const inputNumber = document.getElementById("input-number");
-       const inputNumberValue = parseInt(inputNumber.value);
-      
-      
-         let currentNumber = inputNumberValue;
        
-         if(isIncrease== true && currentNumber>= 0 ){
-
-         currentNumber = inputNumberValue +1;}
-         if(isIncrease == false && currentNumber>0){
-             currentNumber = inputNumberValue -1;
-         }
-         inputNumber.value=currentNumber;
-        document.getElementById("input-number").innerText = currentNumber;
-      }
-         
-      function handleChangesProduct(Increase){
-
-const inputValue = document.getElementById("input-value");
-const numberValue = parseInt(inputValue.value);
-
- let currentNumber = numberValue;
-
- if(Increase== true && currentNumber>= 0 ){
-
- currentNumber = numberValue +1;}
- if(Increase == false && currentNumber>0){
-     currentNumber = numberValue -1;
- }
- inputValue.value=currentNumber;
-document.getElementById("input-value").innerText = currentNumber;
-}
- 
-function calculateTotal(){
-       const inputNumber = document.getElementById("input-number");
-       const inputNumberValue = parseInt(inputNumber.value);
-      
-        
-       const inputValue = document.getElementById("input-value");
-       const numberValue = parseInt(inputValue.value);
-
-         const totalPrice = inputNumberValue* 150 + numberValue*100 ;
-         document.getElementById("subtotal").innerText = totalPrice;
-
-        const tax = Math.round(totalPrice *0.10);
-       
-         document.getElementById("tax-amount").innerText ='$' + tax;
-         const grandTotal = totalPrice +tax;
-         document.getElementById("grand-total").innerText ='$' + grandTotal; }
-
-         /*document.getElementById("booking").addEventListener("click", function() {
-  alert("confirm your order");
-}); */
-          /*   const bookingBtn = document.getElementById("booking-area");
-             bookingBtn.addEventListener('click', function () {
-            const bookingArea = document.getElementById("booking-area");
-            bookingArea.style.display = "none";
-            const information = document.getElementById("info");
-            information.style.display="none";
-            const order = document.getElementById("order-confirmation");
-            order.style.display = "block"; 
-
- 
-        }) */
+        </section>
+        <script>
+            document.getElementById("plus").addEventListener("click", function () {
+                handleChangesOfProduct(true);
+                calculateTotal();
 
 
-     
- 
-  
+            })
+
+            document.getElementById("minus").addEventListener("click", function () {
+                handleChangesOfProduct(false);
+                calculateTotal()
+
+            })
+            document.getElementById("add").addEventListener("click", function () {
+                handleChangesProduct(true);
+                calculateTotal()
+
+            })
+            document.getElementById("remove").addEventListener("click", function () {
+                handleChangesProduct(false);
+                calculateTotal()
+
+            })
+            function handleChangesOfProduct(isIncrease) {
+                const inputNumber = document.getElementById("input-number");
+                const inputNumberValue = parseInt(inputNumber.value);
+
+                let currentNumber = inputNumberValue;
+
+                if (isIncrease == true && currentNumber >= 0) {
+
+                    currentNumber = inputNumberValue + 1;
+                }
+                if (isIncrease == false && currentNumber > 0) {
+                    currentNumber = inputNumberValue - 1;
+                }
+                inputNumber.value = currentNumber;
+                document.getElementById("input-number").innerText = currentNumber;
+            }
+
+            function handleChangesProduct(Increase) {
+
+                const inputValue = document.getElementById("input-value");
+                const numberValue = parseInt(inputValue.value);
+
+                let currentNumber = numberValue;
+
+                if (Increase == true && currentNumber >= 0) {
+
+                    currentNumber = numberValue + 1;
+                }
+                if (Increase == false && currentNumber > 0) {
+                    currentNumber = numberValue - 1;
+                }
+                inputValue.value = currentNumber;
+                document.getElementById("input-value").innerText = currentNumber;
+            }
+            function calculateTotal() {
+                const inputNumber = document.getElementById("input-number");
+                const inputNumberValue = parseInt(inputNumber.value);
+
+
+                const inputValue = document.getElementById("input-value");
+                const numberValue = parseInt(inputValue.value);
+
+                const totalPrice = inputNumberValue * 150 + numberValue * 100;
+                document.getElementById("subtotal").innerText = totalPrice;
+
+                const tax = Math.round(totalPrice * 0.10);
+
+                document.getElementById("tax-amount").innerText = '$' + tax;
+                const grandTotal = totalPrice + tax;
+                document.getElementById("grand-total").innerText = '$' + grandTotal;
+            }
+
+            document.getElementById("booking").addEventListener("click", function () {
+                alert("Your order is being processed");
+
+            })
+
+
+
+
   //<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"></script>
-    <!--Thank You-->
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+            crossorigin="anonymous"></script>
+        <!--Thank You-->
 </body>
 
 </html>
