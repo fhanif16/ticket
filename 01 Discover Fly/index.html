@@ -194,7 +194,7 @@
                 const numberValue = parseInt(inputValue.value);
 
                 const totalPrice = inputNumberValue * 150 + numberValue * 100;
-                document.getElementById("subtotal").innerText = totalPrice;
+                document.getElementById("subtotal").innerText = '$'+ totalPrice;
 
                 const tax = Math.round(totalPrice * 0.10);
 
